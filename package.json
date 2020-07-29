@@ -7,7 +7,7 @@
   "license": "MIT",
   "scripts": {
     "start": "node server/server.js",
-    "heroku-postBuild": "yarn run build:prod",
+    "heroku-postbuild": "yarn run build:prod",
     "serve-live-server": "live-server public",
     "build:watch": "webpack --watch",
     "dev-server": "webpack-dev-server",
