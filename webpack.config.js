@@ -34,9 +34,6 @@ module.exports = (env) => {
     },
 
     plugins: [CSSExtract],
-    //setting up the build mode of the application it has lot of in-built features and
-    //optimizations set by the web-pack. see docs for the list of options when using different modes
-    mode: isProduction ? "production" : "development",
 
     //to display the source files, the best optimized ones.
     devtool: isProduction ? "source-map" : "inline-source-map",
