@@ -1,7 +1,10 @@
 import moment from "moment";
 
 //Get Visible Expenses
-const getVisibleExpenses = (expenses, { text, sortBy, startDate, endDate }) => {
+const getVisibleExpenses = (
+  expenses = [],
+  { text, sortBy, startDate, endDate }
+) => {
   return expenses
     .filter((expense) => {
       const createdAtMoment = moment(expense.createdAt);

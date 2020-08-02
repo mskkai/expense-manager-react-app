@@ -1,5 +1,6 @@
 import firebase from "firebase/app";
 import "firebase/database";
+import "firebase/auth";
 
 var firebaseConfig = {
   apiKey: process.env.FIREBASE_API_KEY,
@@ -13,9 +14,11 @@ var firebaseConfig = {
 // Initialize Firebase
 firebase.initializeApp(firebaseConfig);
 
+const googleAuthProvider = new firebase.auth.GoogleAuthProvider();
+
 const database = firebase.database();
 
-export { firebase, database as default };
+export { firebase, googleAuthProvider, database as default };
 
 // database.ref("expenses").on("value", (snapshot) => {
 //   const expenses = [];
